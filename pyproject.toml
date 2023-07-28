@@ -13,7 +13,7 @@ license = "BSD-2-Clause"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.8, <3.10"
+python = ">=3.8, <3.11"
 anndata = "^0.8"
 astropy = "^5.0"
 geopandas = "^0.10.0"
