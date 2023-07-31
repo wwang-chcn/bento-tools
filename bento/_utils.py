@@ -187,7 +187,7 @@ def sync(data, copy=False):
         # Remove unused categories for categorical columns
         for col in points.columns:
             if points[col].dtype == "category":
-                points[col].cat.remove_unused_categories(inplace=True)
+                points[col] = points[col].cat.remove_unused_categories()
 
         adata.uns[point_key] = points
 
