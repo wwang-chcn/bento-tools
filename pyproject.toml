@@ -40,7 +40,7 @@ MiniSom = "^2.3.0"
 kneed = "^0.8.1"
 adjustText = "^0.7.3"
 sparse = "^0.13.0"
-pandas = "^2.0.2"
+pandas = ">=1.5.1,<2.0.3"
 xgboost = "1.4.0"
 myst-nb = {version = "^0.17.1", extras = ["docs"]}
 sphinx_design = {version = "^0.3.0", extras = ["docs"]}
