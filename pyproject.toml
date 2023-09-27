@@ -39,6 +39,7 @@ MiniSom = "^2.3.0"
 kneed = "^0.8.1"
 adjustText = "^0.7.3"
 sparse = "^0.13.0"
+numpy = "^1.22.4"
 pandas = "^1.5.1"
 xgboost = ">=1.4.0,<1.5.0"
 myst-nb = {version = "^0.17.1", extras = ["docs"]}
