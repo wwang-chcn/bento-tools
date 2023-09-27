@@ -100,7 +100,7 @@ def sindex_points(
         cur_shapes = gpd.GeoDataFrame(geometry=data.obs.loc[cell, shape_names].T)
         cur_sindex = (
             pt_group.reset_index()
-            .sjoin(cur_shapes, how="left", op="intersects")
+            .sjoin(cur_shapes, how="left", predicate="intersects")
             .drop_duplicates(subset="index", keep="first")
             .sort_index()
             .reset_index()["index_right"]
