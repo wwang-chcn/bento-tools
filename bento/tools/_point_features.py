@@ -635,7 +635,7 @@ class ShapeDispersion(PointFeature):
             return {f"{self.shape_prefix}_dispersion": np.nan}
 
         # calculate points moment
-        point_moment = _second_moment(shape.centroid, df[["x", "y"]].values)
+        point_moment = _second_moment(shape.centroid.coords, df[["x", "y"]].values)
 
         return {f"{self.shape_prefix}_dispersion": point_moment}
 
