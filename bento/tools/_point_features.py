@@ -437,8 +437,8 @@ class ShapeDispersionNorm(PointFeature):
         cell_raster = df["cell_raster"].values[0]
 
         # calculate points moment
-        point_moment = _second_moment(shape.centroid, df[["x", "y"]].values)
-        cell_moment = _second_moment(shape.centroid, cell_raster)
+        point_moment = _second_moment(shape.centroid.coords, df[["x", "y"]].values)
+        cell_moment = _second_moment(shape.centroid.coords, cell_raster)
 
         # Normalize by cell moment
         norm_moment = point_moment / cell_moment
@@ -635,7 +635,7 @@ class ShapeDispersion(PointFeature):
             return {f"{self.shape_prefix}_dispersion": np.nan}
 
         # calculate points moment
-        point_moment = _second_moment(shape.centroid, df[["x", "y"]].values)
+        point_moment = _second_moment(shape.centroid.coords, df[["x", "y"]].values)
 
         return {f"{self.shape_prefix}_dispersion": point_moment}
 
